@@ -21,6 +21,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//function compile(str, path) {
+//  return stylus(str).set('filename', path);
+//}
+//app.use(stylus.middleware({
+//  src: __dirname+'/public',
+//  compile : compile
+//}));
 
 app.use('/', routes);
 app.use('/users', users);

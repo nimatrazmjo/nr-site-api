@@ -1,0 +1,23 @@
+{
+  "name": "nr-site",
+  "description": "Nimatullah Razmjo personal Website",
+  "main": "",
+  "authors": [
+    "Nematullah Razmjo <nimatullah.razmjo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.5.8",
+    "jquery-ui": "^1.12.1"
+  }
+}

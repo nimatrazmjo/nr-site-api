@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet', 'Trebuchet', 'Trebuchet';
+}
+.all-background {
+    border: 1px solid #fcd3a1;
+    background-color: #003eff;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}

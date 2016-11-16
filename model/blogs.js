@@ -1,19 +1,18 @@
 var mongoose = require('mongoose');
 
-var Comment = mongoose.Schema({
+var commentSchema = mongoose.Schema({
     fullname : String,
     email : String,
     comment : String,
     created_at : Date
 });
 
-var Blog = mongoose.Schema({
+var blogSchema = mongoose.Schema({
     title : String,
     body : String,
     user_id : String,
     created_at : Date,
     updated_at : Date,
-    comment : [Comment]
+    comment : [commentSchema]
 });
-
-var Blog = mongoose.model('Blog', Blog);
+module.exports = mongoose.model('Blog', blogSchema);

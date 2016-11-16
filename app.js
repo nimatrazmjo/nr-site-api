@@ -5,13 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var stylus = require('stylus');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-
 var app = express();
-
+var resume = require('./routes/resumes')(app);
+var blog = require('./routes/blogs')(app);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -30,6 +31,20 @@ app.use(stylus.middleware({
   src: __dirname+'/public',
   compile : compile
 }));
+
+/**
+ * Connect to mongoDB
+ */
+
+mongoose.connect('mongodb://localhost/nr-site');
+
+var con = mongoose.connection;
+
+con.on('error', console.error.bind('Database does not connected'));
+
+con.once('open', function callback() {
+  console.log('Database has been connected to nr-site Mongodb');
+});
 
 app.use('/', routes);
 app.use('/users', users);

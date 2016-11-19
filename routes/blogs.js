@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-var Blog = require('../model/blogs');
+var Blog = require('./blogs');
 
 module.exports = function(app) {
 

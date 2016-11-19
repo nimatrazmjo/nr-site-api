@@ -1,7 +1,5 @@
 var mongoose = require('mongoose');
 
-var Resume = require('./model/resumes');
-
 var technicalSkillSchema = mongoose.Schema({
     title : String
 });

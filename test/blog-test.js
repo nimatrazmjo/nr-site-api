@@ -27,12 +27,12 @@ describe("Hello Server", function(){
 });
 
 describe("/blogs GET", function(){
-    it("/blog",function(done){
+    it("Return status code 200",function(done){
         request.get(base_url+"/blog",function(error, response, body) {
-            console.log(response.statusCode);
-            console.log(response.statusMessage);
             assert.equal(200, response.statusCode);
             done();
         });
     });
+
+
 });

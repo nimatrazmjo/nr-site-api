@@ -33,6 +33,13 @@ describe("/blogs GET", function(){
             done();
         });
     });
+});
 
-
+describe("/resume GET", function() {
+    it("return status code 200", function(done){
+        request.get(base_url+"/resume", function(error, response, body) {
+            assert.equal(200, response.statusCode);
+            done();
+        });
+    });
 });

@@ -31,7 +31,9 @@ module.exports = function (app) {
   app.put('/blog/:id', blog.update)
   app.delete('/blog/:id', blog.delete)
 
-  app.get('/', resume.list)
+  app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html')
+  })
 }
 
 // var express = require('express')

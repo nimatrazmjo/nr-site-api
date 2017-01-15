@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "concurrently \"webpack --watch\" \"nodemon ./bin/www\" ",
+    "start": "concurrently \"nodemon ./bin/www\" ",
     "test": "mocha"
   },
   "dependencies": {

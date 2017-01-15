@@ -1,26 +1,26 @@
 var _ = require('lodash')
 var Resume = require('../schema/resumes')
 _resumes = []
-/**List all resume */
+/** List all resume */
 module.exports.list = function (req, res) {
   Resume.find(function (err, resumes) {
     if (err) {
-      res.json({info: 'Error occur duing reading resume',error: err})
+      return res.json({info: 'Error occur duing reading resume',error: err})
     }
-    res.json({info: 'Resume found successfully',data: resumes})
+    return res.json({info: 'Resume found successfully',data: resumes})
   })
 }
 
-/**View a resume */
+/** View a resume */
 module.exports.view = function (req, res) {
   Resume.findById(req.params.id, function (err, resumes) {
     if (err) {
-      res.json({info: 'Error occur duing reading resume',error: err})
+      return res.json({info: 'Error occur duing reading resume details ',error: err})
     }
     if (resumes) {
-      res.json({info: 'Resume found successfully',data: resumes})
+      return res.json({info: 'Resume details found successfully',data: resumes})
     } else {
-      res.json({info: 'resume not found'})
+      return res.json({info: 'resume not found'})
     }
   })
 }

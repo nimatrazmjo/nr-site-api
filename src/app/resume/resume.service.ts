@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, Response, URLSearchParams } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -14,11 +14,24 @@ export class ResumeService {
     getResume(): Promise<[1, 2, 3, 4, 5]> {
         return Promise.resolve([1, 2, 3, 4, 5]);
     }
+    /**
+     * List all resumes
+     */
     getResumes(): Observable<Response> {
-        return this.http.get('http://localhost:3000/resume')
+        return this.http.get('/resume')
             .map(this.extractData)
             .catch(this.handleError);
     }
+
+    /**
+     * Get details of selected resume
+     */
+    getDetails(id: string): Observable<Response> {
+        return this.http.get('/resume/' + id)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
 
     private extractData(res: Response) {
         let body = res.json();

@@ -1,21 +1,34 @@
-<pre>List of resumes</pre>
-<table class="table table-responsive table-hover table-condensed table-striped">
-    <thead>
-        <tr>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone </th>
-            <th> Gender</th>
-            <th>Profile</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of records">
-            <td>{{item.full_name}}</td>
-            <td>{{item.email}}</td>
-            <td>{{item.phone}}</td>
-            <td>{{item.gender}}</td>
-            <td>{{item.progile}}</td>
-        </tr>
-    </tbody>
-</table>
+<!------ Resume List -->
+<div *ngIf="details !== true">
+    <span class="page-header"> <h4>List of resumes</h4></span>
+    <input type="button" name="add" value="add" class="btn btn-default btn-success pull-left" value="Add New Resume">
+    <table class="table table-responsive table-hover table-condensed table-striped">
+        <thead>
+            <tr>
+                <th> Full Name</th>
+                <th> Email</th>
+                <th> Phone </th>
+                <th> Gender</th>
+                <th> Profile</th>
+                <th> Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of records">
+                <td>{{item.full_name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.profile}}</td>
+                <td>
+                    <a href="#" class="btn" (click)="onSelect(item._id)"> view details</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- Selected resume Details -->
+
+<div *ngIf="details === true">
+
+</div>

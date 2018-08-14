@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"nodemon ./bin/www\" ",
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@angular/common": "~2.4.2",
@@ -53,7 +55,8 @@
     "serve-favicon": "~2.3.2",
     "stylus": "^0.54.5",
     "systemjs": "0.19.41",
-    "zone.js": "0.7.4"
+    "zone.js": "0.7.4",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "@types/extract-text-webpack-plugin": "^2.0.0",
@@ -88,5 +91,6 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^2.3.1"
-  }
+  },
+  "snyk": true
 }

@@ -6,3 +6,23 @@ patch:
   'npm:lodash:20180130':
     - browser-sync > easy-extender > lodash:
         patched: '2018-07-02T22:05:51.249Z'
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-10-23T23:14:24.796Z'
+  'npm:tunnel-agent:20170305':
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-build > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-build > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp-imagemin > imagemin-gifsicle > gifsicle > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp-imagemin > imagemin-jpegtran > jpegtran-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
+    - gulp-imagemin > imagemin-optipng > optipng-bin > bin-wrapper > download > caw > tunnel-agent:
+        patched: '2018-10-23T23:14:24.796Z'
